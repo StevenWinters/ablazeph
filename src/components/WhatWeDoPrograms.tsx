@@ -66,7 +66,7 @@ const WhatWeDoPrograms = () => {
             Gatherings. Programs. Ministries.
           </h1>
         </header>
-        <Slider>
+        <Slider isBtnWhite={true}>
           {programs.map((program) => (
             <SwiperSlide>
               <PosterCard

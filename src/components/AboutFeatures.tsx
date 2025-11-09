@@ -68,16 +68,19 @@ const features = [
 
 const AboutFeatures = () => {
   return (
-    <section className="block container">
-      <header className="header">
-        <h1>About Us</h1>
-      </header>
-      <div className="about__features">
-        {features.map((feature) => (
-          <Feature src={feature.src} heading={feature.heading}>
-            {feature.description}
-          </Feature>
-        ))}
+    <section className="about">
+      <header className="about__heading">About Us</header>
+      <div className="block container">
+        <header className="header">
+          <h1>About Us</h1>
+        </header>
+        <div className="about__features">
+          {features.map((feature) => (
+            <Feature src={feature.src} heading={feature.heading}>
+              {feature.description}
+            </Feature>
+          ))}
+        </div>
       </div>
     </section>
   );

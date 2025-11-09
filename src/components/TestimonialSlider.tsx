@@ -16,6 +16,7 @@ const TestimonialSlider = () => {
         <h1>Discover Our Stories.</h1>
         <p>
           Impact stories from outreach & being part of the Discipleship Group
+          <br />
         </p>
       </header>
       <div className="testimonial-slider">

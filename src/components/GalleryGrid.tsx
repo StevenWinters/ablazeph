@@ -1,54 +1,149 @@
 import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import Event1 from "../assets/events/event-1.jpg";
-import Event10 from "../assets/events/event-10.jpg";
-import Event11 from "../assets/events/event-11.jpg";
-import Event12 from "../assets/events/event-12.jpg";
-import Event13 from "../assets/events/event-13.jpg";
-import Event14 from "../assets/events/event-14.jpg";
-import Event15 from "../assets/events/event-15.jpg";
-import Event16 from "../assets/events/event-16.jpg";
-import Event17 from "../assets/events/event-17.jpg";
-import Event18 from "../assets/events/event-18.jpg";
-import Event19 from "../assets/events/event-19.jpg";
-import Event2 from "../assets/events/event-2.jpg";
-import Event20 from "../assets/events/event-20.jpg";
-import Event3 from "../assets/events/event-3.jpg";
-import Event4 from "../assets/events/event-4.jpg";
-import Event5 from "../assets/events/event-5.jpg";
-import Event6 from "../assets/events/event-6.jpg";
-import Event7 from "../assets/events/event-7.jpg";
-import Event8 from "../assets/events/event-8.jpg";
-import Event9 from "../assets/events/event-9.jpg";
 import years from "../data/years";
 import Button from "./Button";
 import Img from "./Img";
 import SearchBar from "./SearchBar";
+import Group1 from "../assets/gallery/group_photos/group_1.jpg";
+import Group2 from "../assets/gallery/group_photos/group_2.jpg";
+import Group3 from "../assets/gallery/group_photos/group_3.jpg";
+import Group4 from "../assets/gallery/group_photos/group_4.jpg";
+import Group5 from "../assets/gallery/group_photos/group_5.jpg";
+import Group6 from "../assets/gallery/group_photos/group_6.jpg";
+import Group7 from "../assets/gallery/group_photos/group_7.jpg";
+import Group8 from "../assets/gallery/group_photos/group_8.jpg";
+import Group9 from "../assets/gallery/group_photos/group_9.jpg";
+import Group10 from "../assets/gallery/group_photos/group_10.jpg";
+import Group11 from "../assets/gallery/group_photos/group_11.jpg";
+import Group12 from "../assets/gallery/group_photos/group_12.jpg";
+import Group13 from "../assets/gallery/group_photos/group_13.jpg";
+import Group14 from "../assets/gallery/group_photos/group_14.jpg";
+import Group15 from "../assets/gallery/group_photos/group_15.jpg";
+import Group16 from "../assets/gallery/group_photos/group_16.jpg";
+import Group17 from "../assets/gallery/group_photos/group_17.jpg";
+import Worship1 from "../assets/gallery/worship_photos/worship_1.jpg";
+import Worship2 from "../assets/gallery/worship_photos/worship_2.jpg";
+import Worship3 from "../assets/gallery/worship_photos/worship_3.jpg";
+import Worship4 from "../assets/gallery/worship_photos/worship_4.jpg";
+import Worship5 from "../assets/gallery/worship_photos/worship_5.jpg";
+import Worship6 from "../assets/gallery/worship_photos/worship_6.jpg";
+import Worship7 from "../assets/gallery/worship_photos/worship_7.jpg";
+import Worship8 from "../assets/gallery/worship_photos/worship_8.jpg";
+import Worship9 from "../assets/gallery/worship_photos/worship_9.jpg";
+import Worship10 from "../assets/gallery/worship_photos/worship_10.jpg";
+import Worship11 from "../assets/gallery/worship_photos/worship_11.jpg";
+import Worship12 from "../assets/gallery/worship_photos/worship_12.jpg";
+import Worship13 from "../assets/gallery/worship_photos/worship_13.jpg";
+import Worship14 from "../assets/gallery/worship_photos/worship_14.jpg";
+import Worship15 from "../assets/gallery/worship_photos/worship_15.jpg";
+import Worship16 from "../assets/gallery/worship_photos/worship_16.jpg";
+import Worship17 from "../assets/gallery/worship_photos/worship_17.jpg";
 
 const gallery = [
   {
     date: "2025",
     images: [
       {
-        src: Event1,
+        src: Group1,
       },
       {
-        src: Event2,
+        src: Group2,
       },
       {
-        src: Event3,
+        src: Group3,
       },
       {
-        src: Event4,
+        src: Group4,
       },
       {
-        src: Event5,
+        src: Group5,
       },
       {
-        src: Event6,
+        src: Group6,
       },
       {
-        src: Event7,
+        src: Group7,
+      },
+      {
+        src: Group8,
+      },
+      {
+        src: Group9,
+      },
+      {
+        src: Group10,
+      },
+      {
+        src: Group11,
+      },
+      {
+        src: Group12,
+      },
+      {
+        src: Group13,
+      },
+      {
+        src: Group14,
+      },
+      {
+        src: Group15,
+      },
+      {
+        src: Group16,
+      },
+      {
+        src: Group17,
+      },
+      {
+        src: Worship1,
+      },
+      {
+        src: Worship2,
+      },
+      {
+        src: Worship3,
+      },
+      {
+        src: Worship4,
+      },
+      {
+        src: Worship5,
+      },
+      {
+        src: Worship6,
+      },
+      {
+        src: Worship7,
+      },
+      {
+        src: Worship8,
+      },
+      {
+        src: Worship9,
+      },
+      {
+        src: Worship10,
+      },
+      {
+        src: Worship11,
+      },
+      {
+        src: Worship12,
+      },
+      {
+        src: Worship13,
+      },
+      {
+        src: Worship14,
+      },
+      {
+        src: Worship15,
+      },
+      {
+        src: Worship16,
+      },
+      {
+        src: Worship17,
       },
     ],
   },
@@ -56,25 +151,25 @@ const gallery = [
     date: "2024",
     images: [
       {
-        src: Event8,
+        src: Group1,
       },
       {
-        src: Event9,
+        src: Group1,
       },
       {
-        src: Event10,
+        src: Group1,
       },
       {
-        src: Event11,
+        src: Group1,
       },
       {
-        src: Event12,
+        src: Group1,
       },
       {
-        src: Event13,
+        src: Group1,
       },
       {
-        src: Event14,
+        src: Group1,
       },
     ],
   },
@@ -82,22 +177,22 @@ const gallery = [
     date: "2023",
     images: [
       {
-        src: Event15,
+        src: Group1,
       },
       {
-        src: Event16,
+        src: Group1,
       },
       {
-        src: Event17,
+        src: Group1,
       },
       {
-        src: Event18,
+        src: Group1,
       },
       {
-        src: Event19,
+        src: Group1,
       },
       {
-        src: Event20,
+        src: Group1,
       },
     ],
   },

@@ -6,10 +6,16 @@ import PlayButton from "./PlayButton";
 interface Props {
   slidesPerView?: "auto" | 1;
   spaceBetween?: number;
+  isBtnWhite?: boolean;
   children: ReactNode;
 }
 
-const Slider = ({ children, slidesPerView = "auto", spaceBetween }: Props) => {
+const Slider = ({
+  children,
+  slidesPerView = "auto",
+  spaceBetween,
+  isBtnWhite,
+}: Props) => {
   return (
     <div className="slider__wrapper">
       <Swiper
@@ -32,10 +38,10 @@ const Slider = ({ children, slidesPerView = "auto", spaceBetween }: Props) => {
         {children}
       </Swiper>
       <div className="slider__prev">
-        <PlayButton />
+        <PlayButton isWhite={isBtnWhite} />
       </div>
       <div className="slider__next">
-        <PlayButton />
+        <PlayButton isWhite={isBtnWhite} />
       </div>
     </div>
   );

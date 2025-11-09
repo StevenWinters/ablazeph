@@ -63,7 +63,7 @@ const AboutValues = () => {
           <h2>Our Values</h2>
         </header>
       </div>
-      <div className="block container values__container">
+      <div className="block values__container">
         <Img src={valuesObject.src} className="value__image" />
         <div className="flex value__content">
           <div className="flex flex--column container">

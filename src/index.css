@@ -1107,7 +1107,13 @@ nav.active .mobile__menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#105df3, #09368d);
+  background: linear-gradient(rgba(16, 92, 243, 0.589), rgb(9, 54, 141));
+  box-shadow: 0 2px 4px var(--color-text-lighter);
+}
+
+.btn--circle.white {
+  background: linear-gradient(#fff, #fff);
+  color: var(--color-text);
 }
 
 .btn--circle:hover {
@@ -1188,12 +1194,16 @@ nav.active .mobile__menu {
   position: fixed;
   z-index: 1002;
   top: 0;
-  right: 50%;
-  transform: translateX(50%);
+  left: 0;
+  width: 100%;
   height: 100vh;
   overflow: auto;
   border-radius: 0;
 }
+/* 
+.image__container.active:hover {
+  transform: scale(1);
+} */
 
 .image__container.active .image__overlay {
   opacity: 0;
@@ -1237,6 +1247,14 @@ nav.active .mobile__menu {
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  .image__container.active {
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* remove or not for full screen or regular zoom */
+  }
+}
+
 /* VIDEO */
 
 video {
@@ -1258,6 +1276,17 @@ video {
 }
 
 .testimonial-slider__btn {
+  margin: 0 auto;
+}
+
+.testimonial-message {
+  background-color: var(--color-shade);
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.testimonial-message p {
   margin: 0 auto;
 }
 
@@ -1651,20 +1680,20 @@ video {
 /* WHAT WE DO */
 
 .glow {
-  background-color: var(--color-border);
+  background-color: #2f4c86;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 500px;
   transform: translate(0, 50%);
-  filter: blur(500px);
+  filter: blur(100px);
   z-index: 0;
   border-radius: 100%;
 }
 
 .what-we-do__background {
-  background-color: var(--color-primary);
+  background-color: #02205c;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1854,6 +1883,18 @@ input::-webkit-inner-spin-button {
 
 /* EVENTS */
 
+.event-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 90px;
+  border-radius: 100%;
+  z-index: -1;
+}
+
 .event-gallery__header {
   margin-bottom: 5rem;
 }
@@ -1880,6 +1921,27 @@ input::-webkit-inner-spin-button {
 
 /* ABOUT US */
 
+.about {
+  margin-top: 10vw;
+}
+
+.about__heading {
+  font-size: 24vw;
+  font-weight: 700;
+  white-space: nowrap;
+  position: absolute;
+  top: 15vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: -webkit-linear-gradient(#00000016 20%, transparent 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about__features {
+  margin: 10rem 0;
+}
+
 .purpose {
   background-color: var(--color-shade);
 }
@@ -1892,9 +1954,19 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 10px var(--color-primary-lighter);
 }
 
+@media screen and (min-width: 500px) {
+  .about__heading {
+    top: 5vw;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about__features .feature:nth-child(even) .feature__image {
     order: -1;
+  }
+
+  .about__heading {
+    top: 0;
   }
 
   .purpose__content:last-child {
@@ -1993,13 +2065,32 @@ input::-webkit-inner-spin-button {
 /* MODAL FEATURE */
 
 .modal-feature {
-  background-color: var(--color-text);
   margin-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.modal-feature::before {
+  content: "";
+  background-color: var(--color-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.modal-feature__image {
+  border-radius: 100%;
+  max-width: 200px;
 }
 
 .modal-feature__content,
 .modal-feature__content p {
   color: #fff;
+  margin: 2rem auto;
 }
 
 .modal-feature__heading {
@@ -2030,6 +2121,17 @@ input::-webkit-inner-spin-button {
 
   .feature__heading {
     font-size: 3rem;
+  }
+
+  .modal-feature {
+    display: flex;
+    text-align: left;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-feature__image {
+    max-width: 250px;
   }
 }
 
@@ -2173,16 +2275,6 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.give-message__container {
-  background-color: transparent;
-  background-image: linear-gradient(120deg, #ffffff4d, #0003);
-  background-size: 30px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 2rem;
-  position: absolute;
-}
-
 .give-message__container p {
   font-weight: 400;
   font-size: 2rem;
@@ -2249,6 +2341,7 @@ footer {
 footer .logo {
   margin-bottom: 2rem;
   justify-self: center;
+  transform: translateX(-15px);
 }
 
 footer .logo__name {
@@ -2343,7 +2436,8 @@ footer .logo__name {
   }
 
   .footer__grid.top {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
   }
 
   .footer__grid.bottom {

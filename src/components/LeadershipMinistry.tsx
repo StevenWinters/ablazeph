@@ -59,7 +59,7 @@ const LeadershipMinistry = () => {
   return (
     <section className="block container">
       <header className="header leadership__header">
-        <h2 className="leadership__heading">Our Team</h2>
+        <h2 className="leadership__heading">Our Ministry Heads</h2>
       </header>
       <div className="leadership__container">
         {ministries.map((ministry) => (
