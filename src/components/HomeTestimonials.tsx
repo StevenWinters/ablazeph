@@ -1,6 +1,49 @@
 import { IoChatbubbleSharp } from "react-icons/io5";
 import Testimonial from "./Testimonial";
 
+const testimonialComments = [
+  {
+    name: "Author 1",
+    date: "March 22",
+    commenterType: "Member",
+    comment: `
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur,
+      placeat accusantium ipsam eius qui deserunt reiciendis amet quibusdam 
+      recusandae quis.
+    `,
+  },
+  {
+    name: "Author 2",
+    date: "March 22",
+    commenterType: "Member",
+    comment: `
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur,
+      placeat accusantium ipsam eius qui deserunt reiciendis amet quibusdam 
+      recusandae quis.
+    `,
+  },
+  {
+    name: "Author 3",
+    date: "March 22",
+    commenterType: "Member",
+    comment: `
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur,
+      placeat accusantium ipsam eius qui deserunt reiciendis amet quibusdam 
+      recusandae quis.
+    `,
+  },
+  {
+    name: "Author 4",
+    date: "March 22",
+    commenterType: "Member",
+    comment: `
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur,
+      placeat accusantium ipsam eius qui deserunt reiciendis amet quibusdam 
+      recusandae quis.
+    `,
+  },
+];
+
 const HomeTestimonials = () => {
   return (
     <section className="home__testimonials">
@@ -16,42 +59,15 @@ const HomeTestimonials = () => {
           <span className="testimonial__text">Success Stories</span>
         </div>
         <div className="grid grid--1x2 gap--sm">
-          <Testimonial
-            name="Stevenson Chin"
-            date="March 22"
-            commenterType="Member"
-          >
-            It was such an amazing experience, OMG. How did they create
-            something so CRAZY I LOVE IT. Thank you so mUCH ABLAZE for this
-            wonderful blessing. We wil always be together in JESUS hearts.
-          </Testimonial>
-          <Testimonial
-            name="Stevenson Chin"
-            date="March 22"
-            commenterType="Member"
-          >
-            It was such an amazing experience, OMG. How did they create
-            something so CRAZY I LOVE IT. Thank you so mUCH ABLAZE for this
-            wonderful blessing. We wil always be together in JESUS hearts.
-          </Testimonial>{" "}
-          <Testimonial
-            name="Stevenson Chin"
-            date="March 22"
-            commenterType="Member"
-          >
-            It was such an amazing experience, OMG. How did they create
-            something so CRAZY I LOVE IT. Thank you so mUCH ABLAZE for this
-            wonderful blessing. We wil always be together in JESUS hearts.
-          </Testimonial>{" "}
-          <Testimonial
-            name="Stevenson Chin"
-            date="March 22"
-            commenterType="Member"
-          >
-            It was such an amazing experience, OMG. How did they create
-            something so CRAZY I LOVE IT. Thank you so mUCH ABLAZE for this
-            wonderful blessing. We wil always be together in JESUS hearts.
-          </Testimonial>{" "}
+          {testimonialComments.map((tc) => (
+            <Testimonial
+              name={tc.name}
+              date={tc.date}
+              commenterType={tc.commenterType}
+            >
+              {tc.comment}
+            </Testimonial>
+          ))}
         </div>
       </div>
     </section>

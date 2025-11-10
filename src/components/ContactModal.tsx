@@ -30,13 +30,22 @@ const ContactModal = () => {
                 <h3>Connect with Us.</h3>
               </header>
               <div className="flex gap--lg contact__icons">
-                <Link to="">
+                <Link
+                  target="_blank"
+                  to="https://www.facebook.com/ablazeforjesus"
+                >
                   <FaFacebook />
                 </Link>
-                <Link to="">
+                <Link
+                  target="_blank"
+                  to="https://www.instagram.com/ablazeforjesus_/"
+                >
                   <FaInstagram />
                 </Link>
-                <Link to="">
+                <Link
+                  target="_blank"
+                  to="https://www.youtube.com/@ablazeforJesus"
+                >
                   <FaYoutube />
                 </Link>
               </div>

@@ -1333,6 +1333,7 @@ video {
 
 .testimonial-slider__video {
   margin: 0;
+  display: block;
 }
 
 .testimonial-slider__header {

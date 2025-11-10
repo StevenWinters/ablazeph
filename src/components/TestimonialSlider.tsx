@@ -1,14 +1,12 @@
 import { SwiperSlide } from "swiper/react";
 import Testimonial1 from "../assets/testimonials/testimonial-1.mp4";
 import Testimonial2 from "../assets/testimonials/testimonial-2.mp4";
-import Testimonial3 from "../assets/testimonials/testimonial-3.mp4";
-import Testimonial4 from "../assets/testimonials/testimonial-4.mp4";
 import Slider from "./Slider";
 import Button from "./Button";
 import { FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 
-const videos = [Testimonial1, Testimonial2, Testimonial3, Testimonial4];
+const videos = [Testimonial1, Testimonial2, Testimonial1, Testimonial2];
 
 const TestimonialSlider = () => {
   const [videoSrc, setVideoSrc] = useState("");

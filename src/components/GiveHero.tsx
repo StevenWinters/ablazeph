@@ -36,7 +36,7 @@ const GiveHero = () => {
                 </div>
                 <div className="give__box">
                   <span className="give__section">Account Name</span>
-                  <span className="give__detail">Stevenson Chin ABLAZE</span>
+                  <span className="give__detail">ABLAZE</span>
                 </div>
               </div>
             </div>
