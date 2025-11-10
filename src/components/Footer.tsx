@@ -12,27 +12,43 @@ const Footer = () => {
         <div className="grid footer__grid top">
           <Logo />
           <div className="flex flex--wrap justify--center footer__icons">
-            <span className="footer__icon">
+            <Link to="/" className="footer__icon">
               <FaXTwitter />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link
+              target="_blank"
+              to="https://www.facebook.com/ablazeforjesus"
+              className="footer__icon"
+            >
               <FaFacebookF />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link to="/" className="footer__icon">
               <FaTiktok />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link
+              target="_blank"
+              to="https://www.instagram.com/ablazeforjesus_/"
+              className="footer__icon"
+            >
               <FaInstagram />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link to="/" className="footer__icon">
               <SiGmail />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link
+              target="_blank"
+              to="https://www.youtube.com/@ablazeforJesus"
+              className="footer__icon"
+            >
               <FaYoutube />
-            </span>
-            <span className="footer__icon">
+            </Link>
+            <Link
+              target="_blank"
+              to="https://www.google.com/maps/place/Ablaze+for+Jesus+Family+Church/@14.6701609,120.9678831,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b43c1fd0fe55:0xc19633e7c54d6740!8m2!3d14.6701609!4d120.970458!16s%2Fg%2F11fzwsrhj5?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+              className="footer__icon"
+            >
               <SiGooglemaps />
-            </span>
+            </Link>
           </div>
         </div>
         <div className="grid footer__grid bottom">
