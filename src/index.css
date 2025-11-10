@@ -308,6 +308,10 @@ a {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* NAVBAR */
@@ -907,22 +911,6 @@ nav.active .mobile__menu {
 
 .feature__image {
   border-radius: 25px;
-}
-
-/* CARD FEATURE */
-
-.card-feature {
-  background-color: var(--color-shade);
-  border-radius: 25px;
-  box-shadow: 0 0 2px var(--color-border);
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  .card-feature {
-    padding: 2rem 3rem;
-  }
 }
 
 /* SERMON FEATURES */
@@ -1765,6 +1753,19 @@ video {
   text-shadow: 0 -2px 4px var(--color-text);
 }
 
+.what-we-do__ministries {
+  text-align: center;
+}
+
+.what-we-do__ministries p {
+  margin: 0 auto;
+}
+
+.what-we-do__ministry-image {
+  border-radius: 20px;
+  height: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   .what-we-do__background {
     clip-path: polygon(0% 0%, 0% 100%, 50% 80%, 100% 100%, 100% 0%);
@@ -2233,6 +2234,59 @@ input::-webkit-inner-spin-button {
   .head-feature__logo {
     left: -10px;
     transform: translateX(0);
+  }
+}
+
+/* FEATURE GALLERY */
+
+.feature-gallery {
+  margin-bottom: 10rem;
+}
+
+.feature-gallery:nth-child(even) .feature-gallery__content {
+  order: 2;
+}
+
+.feature-gallery__content {
+  margin-bottom: 5rem;
+}
+
+.feature-gallery__expandable {
+  max-height: 50vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.feature-gallery__expandable.active {
+  max-height: 100%;
+}
+
+.feature-gallery__expandable.active::before {
+  display: none;
+}
+
+.feature-gallery__expandable::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #fff);
+}
+
+@media screen and (min-width: 500px) {
+  .feature-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
