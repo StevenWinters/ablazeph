@@ -635,6 +635,10 @@ nav.active .mobile__menu {
   margin-bottom: 4rem;
 }
 
+.hero__btn .btn {
+  width: 100%;
+}
+
 .hero__cta {
   font-size: 2rem;
   display: block;
@@ -1094,7 +1098,6 @@ nav.active .mobile__menu {
 
 .btn--special {
   background: linear-gradient(to right, #09368d, #105df3);
-  box-shadow: 0 0 2px var(--color-border);
 }
 
 .btn--special:hover {

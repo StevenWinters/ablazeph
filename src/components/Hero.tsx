@@ -2,6 +2,7 @@ import Button from "./Button";
 import Img from "./Img";
 import HeroImage from "../assets/hero.jpg";
 import Slash from "../assets/slash.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -18,7 +19,9 @@ const Hero = () => {
           Loving God, Loving People, Making Disciples
         </span>
         <div className="flex flex--column gap--md hero__btns">
-          <Button type="outline">Join</Button>
+          <Link to="/what-we-do">
+            <Button type="outline">Learn More</Button>
+          </Link>
           <Button color="special">Sign Up for a Discipleship Group</Button>
         </div>
         <span className="hero__cta">Join us every Sunday at 10:00 AM</span>

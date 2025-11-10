@@ -1,6 +1,7 @@
 import Button from "./Button";
 import JC from "../assets/jc.jpg";
 import Img from "./Img";
+import { Link } from "react-router-dom";
 
 const InvolvedHero = () => {
   return (
@@ -12,8 +13,12 @@ const InvolvedHero = () => {
             <h1>Serve With Us.</h1>
           </header>
           <div className="flex flex--column gap--md involved-hero__btns">
-            <Button color="accent">Join</Button>
-            <Button color="special">Sign Up for a Discipleship Group</Button>
+            <Link to="/what-we-do" className="hero__btn">
+              <Button color="accent">Learn More</Button>
+            </Link>
+            <Link to="" className="hero__btn">
+              <Button color="special">Sign Up for a Discipleship Group</Button>
+            </Link>
           </div>
         </div>
         <Img src={JC} className="involved-hero__image" />
