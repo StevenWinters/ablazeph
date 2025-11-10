@@ -6,10 +6,13 @@ import Testimonial4 from "../assets/testimonials/testimonial-4.mp4";
 import Slider from "./Slider";
 import Button from "./Button";
 import { FaYoutube } from "react-icons/fa";
+import { useState } from "react";
 
 const videos = [Testimonial1, Testimonial2, Testimonial3, Testimonial4];
 
 const TestimonialSlider = () => {
+  const [videoSrc, setVideoSrc] = useState("");
+
   return (
     <section className="block container">
       <header className="testimonial-slider__header">
@@ -19,11 +22,23 @@ const TestimonialSlider = () => {
           <br />
         </p>
       </header>
+      {videoSrc && (
+        <video src={videoSrc} controls className="testimonial__video"></video>
+      )}
       <div className="testimonial-slider">
         <Slider>
           {videos.map((src) => (
-            <SwiperSlide>
-              <video src={src} controls></video>
+            <SwiperSlide className="testimonial-slider__slide">
+              <figure className="testimonial-slider__figure">
+                <div className="flex justify--center align--center testimonial-slider__overlay">
+                  <span>Watch</span>
+                </div>
+                <video
+                  src={src}
+                  className="testimonial-slider__video"
+                  onClick={() => setVideoSrc(src)}
+                ></video>
+              </figure>
             </SwiperSlide>
           ))}
         </Slider>

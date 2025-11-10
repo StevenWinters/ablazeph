@@ -9,3 +9,10 @@ createRoot(document.getElementById("root")!).render(
     <RouterProvider router={router} />
   </StrictMode>
 );
+
+// git reflog expire --expire=now --all
+// git gc --prune=now --aggressive
+
+// incase of tracked & cached large files,
+// use this command to remove cache
+// stage, commit, & push after

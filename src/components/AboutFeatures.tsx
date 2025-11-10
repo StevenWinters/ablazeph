@@ -6,7 +6,7 @@ const features = [
     src: FeatureImage,
     description: `
         Ablaze for Jesus Family Church Philippines Inc. traces its beginnings to
-        the year 2013, when a group of young professionals responded to God’s
+        the year 2013, when a group of young professionals responded to God's
         calling to establish a ministry dedicated to sharing the gospel of Jesus
         Christ. Their vision was clear: to reach young people and young
         professionals with the message of salvation and to raise them as
@@ -71,7 +71,7 @@ const AboutFeatures = () => {
     <section className="about">
       <header className="about__heading">About Us</header>
       <div className="block container">
-        <header className="header">
+        <header>
           <h1>About Us</h1>
         </header>
         <div className="about__features">
