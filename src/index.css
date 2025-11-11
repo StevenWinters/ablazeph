@@ -633,9 +633,12 @@ nav.active .mobile__menu {
 
 .hero__btns {
   margin-bottom: 4rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero__btn .btn {
+.hero__btns .btn {
   width: 100%;
 }
 
@@ -677,6 +680,11 @@ nav.active .mobile__menu {
 
   .hero__btns {
     flex-direction: row;
+    max-width: 100%;
+  }
+
+  .hero__btns .btn {
+    width: auto;
   }
 }
 

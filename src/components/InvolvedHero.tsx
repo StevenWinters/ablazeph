@@ -12,7 +12,7 @@ const InvolvedHero = () => {
           <header className="header involved-hero__header">
             <h1>Serve With Us.</h1>
           </header>
-          <div className="flex flex--column gap--md involved-hero__btns">
+          <div className="flex flex--column gap--md hero__btns involved-hero__btns">
             <Link to="/what-we-do" className="hero__btn">
               <Button color="accent">Learn More</Button>
             </Link>
