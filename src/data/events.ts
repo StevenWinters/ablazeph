@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { IoCloseOutline } from "react-icons/io5";
 import APAW1 from "../assets/events/all_out_praise_&_worship/apaw_1.jpg";
 import APAW2 from "../assets/events/all_out_praise_&_worship/apaw_2.jpg";
 import APAW3 from "../assets/events/all_out_praise_&_worship/apaw_3.jpg";
@@ -47,13 +45,12 @@ import SF10 from "../assets/events/sportsfest/sf_10.jpg";
 import SF11 from "../assets/events/sportsfest/sf_11.jpg";
 import SF12 from "../assets/events/sportsfest/sf_12.jpg";
 
-import Img from "./Img";
-
 const events = [
   {
     date: "2025",
     event: [
       {
+        slug: "apaw",
         name: "APAW (All Out Praise & Worship)",
         images: [
           APAW1,
@@ -73,6 +70,7 @@ const events = [
         ],
       },
       {
+        slug: "relief",
         name: "Relief Operations",
         images: [
           Relief1,
@@ -98,6 +96,7 @@ const events = [
         ],
       },
       {
+        slug: "sportsfest",
         name: "Sportsfest",
         images: [SF1, SF2, SF3, SF4, SF5, SF6, SF7, SF8, SF9, SF10, SF11, SF12],
       },
@@ -107,6 +106,7 @@ const events = [
     date: "2024",
     event: [
       {
+        slug: "sportsfest",
         name: "",
         images: [APAW1],
       },
@@ -116,6 +116,7 @@ const events = [
     date: "2023",
     event: [
       {
+        slug: "sportsfest",
         name: "",
         images: [APAW1],
       },
@@ -123,107 +124,4 @@ const events = [
   },
 ];
 
-const upcoming = [APAW1];
-
-const EventGallery = () => {
-  const [zoomedImage, setZoomedImage] = useState("");
-
-  return (
-    <>
-      <div className="event-circle"></div>
-      {zoomedImage && <div className="zoom__background"></div>}
-      <section className="block event-gallery">
-        <div className="container">
-          <header className="event-gallery__header">
-            <h1>Events</h1>
-          </header>
-        </div>
-        <div className="container">
-          <header>
-            <h2 className="event-gallery__heading">Upcoming</h2>
-            <span className="event__date"></span>
-          </header>
-          <div className="flex flex--wrap gap--md justify--center event-gallery__container">
-            {upcoming.map((image) => (
-              <figure
-                className={`image__container ${
-                  zoomedImage === image && "active"
-                }`}
-              >
-                <span
-                  className={`image__close ${
-                    zoomedImage === image && "active"
-                  }`}
-                  onClick={() => setZoomedImage("")}
-                >
-                  <IoCloseOutline />
-                </span>
-                <div
-                  className="flex justify--center align--center image__overlay"
-                  onClick={() => setZoomedImage(image)}
-                >
-                  <div className="flex flex--column align--center overlay__content">
-                    <h3>View</h3>
-                  </div>
-                </div>
-                <Img src={image} className="event-gallery__image" />
-              </figure>
-            ))}
-          </div>
-        </div>
-        {events.map((e) => (
-          <>
-            <header className="block container flex gap--md align--center">
-              <h2 className="event-gallery__heading">
-                {new Date().getFullYear().toString() === e.date
-                  ? "Now"
-                  : "Past"}
-              </h2>
-              <span className="event-gallery__date">{e.date}</span>
-            </header>
-
-            {e.event.map((event) => (
-              <div>
-                <header className="block container">
-                  <h3>{event.name}</h3>
-                </header>
-                <div className="masonry gallery__grid event-gallery__grid">
-                  <div>
-                    {event.images.map((image) => (
-                      <figure
-                        className={`image__container ${
-                          zoomedImage === image && "active"
-                        }`}
-                      >
-                        <span
-                          className={`image__close ${
-                            zoomedImage === image && "active"
-                          }`}
-                          onClick={() => setZoomedImage("")}
-                        >
-                          <IoCloseOutline />
-                        </span>
-                        <div
-                          className="flex justify--center align--center image__overlay"
-                          onClick={() => setZoomedImage(image)}
-                        >
-                          <div className="flex flex--column align--center overlay__content">
-                            <h3>View</h3>
-                            <span className="overlay__date">{e.date}</span>
-                          </div>
-                        </div>
-                        <Img src={image} className="event-gallery__image" />
-                      </figure>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </>
-        ))}
-      </section>
-    </>
-  );
-};
-
-export default EventGallery;
+export default events;

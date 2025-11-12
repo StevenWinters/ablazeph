@@ -1,9 +1,10 @@
-import EventGallery from "../components/EventGallery";
+import { Outlet } from "react-router-dom";
+import EventGalleryPage from "../components/EventGalleryPage";
 
 const EventsPage = () => {
   return (
     <>
-      <EventGallery />
+      <Outlet />
     </>
   );
 };
